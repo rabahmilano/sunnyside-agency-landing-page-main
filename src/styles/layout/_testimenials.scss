@@ -1,0 +1,66 @@
+.testimenials {
+  padding: 4rem 0;
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 2rem;
+    letter-spacing: 3px;
+    color: $blueGrayish;
+  }
+
+  &__content {
+    width: 80vw;
+    max-width: 450px;
+    margin: 0 auto;
+
+    &__article {
+      padding: 2rem 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $blueGrayishVeryDark;
+
+      & p {
+        font-size: 1.1rem;
+        line-height: 1.9;
+        margin: 2rem 0;
+      }
+
+      & h3 {
+        color: $blueDesaturatedVeryDark;
+      }
+
+      & h4 {
+        margin: .8rem 0 0;
+        font-family: Barlow;
+        color: $blueGrayish;
+      }
+    }
+  }
+
+  @include breakpoint-up(xlarge) {
+    padding: 10rem 0;
+
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    &__content {
+      max-width: 1400px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+
+      &__article {
+        padding: 2.5rem 0;
+
+        & p {
+          margin: 3.5rem 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.navbar {
+  width: 100vw;
+  background: transparent;
+  z-index: 1;
+
+  &__center {
+    width: 86vw;
+    margin: 0 auto;
+    max-width: 1500px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+    color: $white;
+  }
+
+  &__toggle {
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__links-container {
+    height: 0;
+    overflow-y: hidden;
+    background-color: $white;
+    width: 86vw;
+    position: absolute;
+    // top: 7.7rem;
+    left: 0;
+    @include transition;
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: -1.8rem;
+    //   right: 0;
+    //   border-bottom: 2rem solid crimson;
+    //   border-left: 2rem solid transparent;
+    //   z-index: 111111;
+    //   @include transition;
+    // }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0 2rem;
+    align-items: center;
+    justify-content: center;
+
+    &__link {
+      & a {
+        color: $blueGrayishVeryDark;
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-weight: 600;
+        @include transition;
+
+        &:hover {
+          letter-spacing: 4px;
+        }
+      }
+
+      &:nth-of-type(4) a {
+        background: $yellow;
+        border-radius: 40px;
+        color: $blueDesaturatedVeryDark;
+        font-family: Fraunces;
+        font-size: .9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include transition;
+      }
+    }
+  }
+
+  @include breakpoint-up(large) {
+    &__center {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__header {
+      width: fit-content;
+    }
+
+    &__toggle {
+      display: none !important;
+    }
+
+    &__links-container {
+      height: auto !important;
+      overflow: visible;
+      position: inherit;
+      width: auto;
+      background: transparent;
+    }
+
+    &__menu {
+      flex-direction: row;
+      padding: 0;
+
+      &__link {
+        & a {
+          color: $white;
+        }
+      }
+
+      &__link:nth-of-type(4) a {
+        background: $white;
+
+        &:hover {
+          color: $white;
+          background: rgba($white, .5);
+        }
+      }
+    }
+  }
+
+
+
+  @include breakpoint-up(xlarge) {
+    padding: 1.5rem 0;
+
+    &__center {
+      width: 94vw;
+    }
+
+    &__menu__link {
+      & a {
+        font-size: 1.1rem;
+      }
+
+      &:nth-of-type(4) a {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
