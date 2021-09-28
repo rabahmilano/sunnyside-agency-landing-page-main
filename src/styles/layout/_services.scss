@@ -60,10 +60,6 @@
       }
     }
 
-    &:nth-child(4) &__btn::after {
-      background-color: $redSoft;
-    }
-
     &__fleet {
       position: absolute;
       bottom: 4rem;
@@ -86,6 +82,14 @@
       &>p {
         font-size: 1rem;
         color: $cyanDesaturatedDark;
+      }
+    }
+  }
+
+  &__simple {
+    &:nth-child(2) {
+      & .services__article__btn::after {
+        background-color: $redSoft;
       }
     }
   }

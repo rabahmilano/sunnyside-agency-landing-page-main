@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/rabahmilano/sunnyside-agency-landing-page-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Click here to visit](https://github.com/rabahmilano/sunnyside-agency-landing-page-main)
+- Live Site URL: [Click here to visit](https://sunnyside-agency-landing-page-rx1.netlify.app/)
 
 ## My process
 
